@@ -47,7 +47,20 @@
 ![image](https://github.com/lumgroup34num1/SM2include11-17/assets/129478488/4e09d4ae-a030-43d5-8634-4541938b0bc8)
 ![image](https://github.com/lumgroup34num1/SM2include11-17/assets/129478488/cc8d31a8-5755-4e0d-b6c6-da12c4543367)
 
-
-
 # project 16 implement sm2 2P decrypt with real network communication
+## 1、实验原理
+![dec.png](https://s2.loli.net/2022/07/28/IH1CRJBVi74xZ2n.png)
+<p align="center">两方SM2解密原理</p>
+
+## 2、实验结果
+![image](https://github.com/lumgroup34num1/SM2include11-17/assets/129478488/9cedb6f0-ae3e-4935-9bc3-d6a83c0694be)
+![image](https://github.com/lumgroup34num1/SM2include11-17/assets/129478488/9b608455-d909-4645-af27-96aedf836d84)
+
+# project 17  PoC impl of the scheme, or do implement analysis by Google
+## 1、实验原理
+![image](https://github.com/lumgroup34num1/SM2include11-17/assets/129478488/eac60fb2-200b-4cc5-897f-9a2e750f17dd)
+采用TCP通信模拟真实网络通信过程，完成了模拟Google Password Checkup，效果为能在用户不向服务器泄露私钥、服务器不向用户透露已泄露密码的前提下使用户检查服务器泄露密码库中是否有自己的密码从而进行检测，部分原理类似DH密钥交换。
+## 2、实验结果
+![pascheck_server.png](https://s2.loli.net/2022/07/30/ELncHd4DyKXPuQf.png)
+
 
