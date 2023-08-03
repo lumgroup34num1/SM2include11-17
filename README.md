@@ -27,6 +27,37 @@
 ![image](https://github.com/lumgroup34num1/SM2include11-17/assets/129478488/552d778b-2ec4-42fd-a013-229a09e4de1b)
 ![image](https://github.com/lumgroup34num1/SM2include11-17/assets/129478488/6aeca06a-c309-458d-9211-1cc62c303965)
 # project 12 verify the above pitfalls with proof-of-concept code
+## 实验结果
+    
+&emsp;&emsp;完成了表格中三个算法的大部分signature pitfalls，包括ECDSA、Schnorr、SM2-Sig算法的泄露k、重复使用k、不同用户使用相同k、与ECDSA算法使用相同k造成私钥泄露的实例，完成了ECDSA和Schnorr算法的仅提供H(m)下的签名伪造实例。
+![image](https://github.com/lumgroup34num1/SM2include11-17/assets/129478488/7e38d7d2-3605-4af7-b2bc-8786b9230a0a)
+![image](https://github.com/lumgroup34num1/SM2include11-17/assets/129478488/97933815-8f55-4197-a249-c3ff27c50d96)
+![image](https://github.com/lumgroup34num1/SM2include11-17/assets/129478488/34aca231-c2f3-46c3-ae02-b43b3baead25)
+
+## 实验步骤
+
+&emsp;&emsp;其中3个算法的signature pitfalls原理大致相同，此处前四种情况以sm2为例，伪造签名以ECDSA为例，其它算法的原理可见代码注释，此处不再重复。
+
+### 1. Leaking k leads to leaking of d
+
+![leakingk.png](https://s2.loli.net/2022/07/27/v3cOR4KTup8jtwB.png)
+
+### 2. Reusing k leads to leaking of d
+
+![reusing k.png](https://s2.loli.net/2022/07/27/RZWp81JgKueoIbw.png)
+
+### 3. Tow users's same k leaks d
+
+![diff k.png](https://s2.loli.net/2022/07/27/Dfg2NPBRYMCA8ZV.png)
+
+### 4. same d and k with ECDSA lead to leaking of d
+
+![withecdsa.png](https://s2.loli.net/2022/07/27/TD53pxFdywRI9oM.png)
+
+### 5. Forge signature if only H(m) is checked
+
+![伪造原理.png](https://s2.loli.net/2022/07/27/LWVSTnaitY2jskC.png)
+
 
 
 
